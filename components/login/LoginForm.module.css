@@ -1,0 +1,503 @@
+/* ==================== RIGHT PANEL ==================== */
+.rightPanel {
+  background-color: var(--white-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ==================== DECORATIVE — BOTTOM RIGHT ==================== */
+.decoBottomRight {
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Larger teal circle */
+.decoBR1 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(32, 178, 210, 0.22);
+}
+
+/* Smaller overlapping circle */
+.decoBR2 {
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(15, 150, 195, 0.18);
+}
+
+/* Yellow arc / crescent at the very corner */
+.decoYellowArc {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: transparent;
+  border: 22px solid #f5c518;
+  opacity: 0.85;
+}
+
+
+/* Card wrapper — centers card + footer vertically */
+.cardWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 2.5vh, 32px) clamp(20px, 3vw, 40px);
+  gap: clamp(10px, 1.5vh, 18px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ==================== CARD ==================== */
+.card {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: clamp(20px, 3vh, 32px) clamp(24px, 3.5vw, 40px);
+  width: min(500px, calc(100% - 32px));
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* Welcome label */
+.welcomeLabel {
+  color: var(--dark-blue);
+  font-size: clamp(10px, 1.2vh, 12px);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: clamp(2px, 0.4vh, 4px);
+}
+
+/* Yellow short line */
+.cardAccentLine {
+  width: 32px;
+  height: 3px;
+  background-color: var(--butter-yellow);
+  border-radius: 2px;
+  margin-bottom: clamp(6px, 1vh, 10px);
+}
+
+/* Heading */
+.cardHeading {
+  color: #0f172a;
+  font-size: clamp(20px, 2.8vh, 28px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: clamp(4px, 0.7vh, 8px);
+}
+
+/* Subtext */
+.cardSubtext {
+  color: #6b7280;
+  font-size: clamp(12px, 1.4vh, 13.5px);
+  line-height: 1.45;
+  margin-bottom: clamp(10px, 1.8vh, 18px);
+}
+
+/* ==================== FORM ==================== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.4vh, 14px);
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3px, 0.5vh, 5px);
+}
+
+.label {
+  color: #374151;
+  font-size: clamp(12px, 1.3vh, 13.5px);
+  font-weight: 600;
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 14px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.inputIcon svg {
+  width: clamp(15px, 1.8vh, 18px);
+  height: clamp(15px, 1.8vh, 18px);
+}
+
+.input {
+  width: 100%;
+  padding: clamp(9px, 1.4vh, 12px) 14px clamp(9px, 1.4vh, 12px) 40px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 9px;
+  font-size: clamp(12px, 1.3vh, 13.5px);
+  color: #1f2937;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:focus {
+  border-color: var(--dark-blue);
+  box-shadow: 0 0 0 3px rgba(7, 102, 151, 0.1);
+  background: var(--white);
+}
+
+.eyeButton {
+  position: absolute;
+  right: 12px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+.eyeButton svg {
+  width: clamp(15px, 1.8vh, 18px);
+  height: clamp(15px, 1.8vh, 18px);
+}
+
+.eyeButton:hover {
+  color: var(--dark-blue);
+}
+
+/* Remember me row */
+.rememberRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--dark-blue);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkboxText {
+  color: #374151;
+  font-size: clamp(11.5px, 1.3vh, 13px);
+}
+
+.forgotLink {
+  color: var(--dark-blue);
+  font-size: clamp(11.5px, 1.3vh, 13px);
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.forgotLink:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* Submit button */
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-size: clamp(13.5px, 1.5vh, 15px);
+  font-weight: 700;
+  padding: clamp(10px, 1.5vh, 13px) 20px;
+  border-radius: 9px;
+  width: 100%;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 2px;
+}
+
+.submitButton svg {
+  width: clamp(14px, 1.6vh, 17px);
+  height: clamp(14px, 1.6vh, 17px);
+}
+
+.submitButton:hover {
+  background-color: #065580;
+}
+
+.submitButton:active {
+  transform: translateY(1px);
+}
+
+.submitButtonLoading {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.submitButtonLoading:hover {
+  background-color: var(--dark-blue);
+}
+
+/* Error banner */
+.errorBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #dc2626;
+  font-size: clamp(12px, 1.3vh, 13px);
+  line-height: 1.45;
+  margin-bottom: 2px;
+  animation: fadeSlideIn 0.2s ease;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Spinner animation */
+.spinner {
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: clamp(10px, 1.5vh, 16px) 0 clamp(8px, 1.2vh, 14px);
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background-color: #e5e7eb;
+  display: block;
+}
+
+/* Create account section */
+.createAccountSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.createAccountText {
+  color: #6b7280;
+  font-size: clamp(11.5px, 1.2vh, 12.5px);
+}
+
+.createAccountLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--dark-blue);
+  font-weight: 700;
+  font-size: clamp(12px, 1.3vh, 13.5px);
+  transition: opacity 0.2s;
+}
+
+.createAccountLink svg {
+  width: clamp(13px, 1.4vh, 15px);
+  height: clamp(13px, 1.4vh, 15px);
+}
+
+.createAccountLink:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  text-align: center;
+  width: min(500px, calc(100% - 32px));
+  max-width: 500px;
+  flex-shrink: 0;
+}
+
+.footerQuote {
+  color: #4b5563;
+  font-size: clamp(10px, 1.2vh, 11.5px);
+  font-style: italic;
+  margin-bottom: 2px;
+}
+
+.footerBrand {
+  color: #9ca3af;
+  font-size: clamp(9px, 1.1vh, 10.5px);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ==================== TABLET ==================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .card {
+    width: min(460px, calc(100% - 32px));
+    padding: clamp(16px, 2.2vh, 26px) clamp(20px, 2.5vw, 32px);
+  }
+
+  .cardHeading {
+    font-size: clamp(18px, 2.4vh, 24px);
+  }
+}
+
+/* ==================== MOBILE ==================== */
+@media (max-width: 768px) {
+  .rightPanel {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+    position: static;
+    background-color: var(--white-grey);
+    padding: 0 0 24px;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .cardWrapper {
+    height: auto;
+    min-height: 0;
+    padding: 16px 16px 0;
+    gap: 12px;
+    overflow: visible;
+    justify-content: flex-start;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+    flex-shrink: 0;
+    border-radius: 16px;
+  }
+
+  .welcomeLabel {
+    font-size: 11px;
+    margin-bottom: 3px;
+  }
+
+  .cardAccentLine {
+    margin-bottom: 8px;
+  }
+
+  .cardHeading {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .cardSubtext {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .form {
+    gap: 14px;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+
+  .input {
+    padding: 12px 14px 12px 40px;
+    font-size: 14px;
+  }
+
+  .checkboxText {
+    font-size: 13px;
+  }
+
+  .forgotLink {
+    font-size: 13px;
+  }
+
+  .submitButton {
+    padding: 13px 20px;
+    font-size: 15px;
+  }
+
+  .divider {
+    margin: 14px 0 12px;
+  }
+
+  .createAccountText {
+    font-size: 12.5px;
+  }
+
+  .createAccountLink {
+    font-size: 13.5px;
+  }
+
+  .footer {
+    width: calc(100% - 32px);
+    max-width: 100%;
+    margin: 10px auto 0;
+    padding: 0 16px;
+  }
+
+  .footerQuote {
+    font-size: 11px;
+  }
+
+  .footerBrand {
+    font-size: 10px;
+  }
+}

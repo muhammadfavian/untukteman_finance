@@ -1,0 +1,169 @@
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 24px 14px;
+  flex: 1;
+  min-height: 200px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ── Header ── */
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  font-size: 17.5px;
+  font-weight: 800;
+  color: #076697;
+  letter-spacing: -0.3px;
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.selectWrap {
+  position: relative;
+}
+
+.select {
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 6px 28px 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1e293b;
+  cursor: pointer;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.select:focus {
+  border-color: #0EA3D6;
+}
+
+/* ── Chart ── */
+.chartWrap {
+  width: 100%;
+  height: 210px;
+  flex: 1;
+}
+
+/* ── Tooltip ── */
+.tooltip {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #076697;
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f5f9;
+  min-width: 180px;
+}
+
+.tooltipMonth {
+  font-size: 11.5px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #64748b;
+}
+
+.tooltipRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.tooltipRow:last-child {
+  margin-bottom: 0;
+}
+
+.tooltipDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tooltipLabel {
+  font-size: 11px;
+  color: #64748b;
+  flex: 1;
+}
+
+.tooltipValue {
+  font-size: 12px;
+  font-weight: 700;
+  color: #076697;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+    padding: 16px;
+  }
+
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .headerRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+}
