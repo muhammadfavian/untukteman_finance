@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import logoImg from '@/public/images/logo_clean.png';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -107,12 +108,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
         {/* Logo */}
         <div className={styles.logoSection}>
-          <img
-            src="/images/logo_clean.png"
+          <Image
+            src={logoImg}
             alt="Untuk Teman Logo"
             width={56}
             height={56}
             className={styles.logo}
+            priority
           />
           <p className={styles.brandName}>UNTUK TEMAN</p>
           <p className={styles.brandSub}>Data untuk dampak<br />lebih besar</p>

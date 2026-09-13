@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import logoImg from '@/public/images/logo_clean.png';
 import Benefits from './Benefits';
 import styles from './BrandPanel.module.css';
 
@@ -34,12 +35,13 @@ export default function BrandPanel() {
         {/* ── Logo + Brand — tepat di bawah teks ── */}
         <div className={styles.logoBrandWrap}>
           <div className={styles.logoWrap}>
-            <img
-              src="/images/logo_clean.png"
+            <Image
+              src={logoImg}
               alt="Untuk Teman Logo"
               width={80}
               height={80}
               className={styles.logo}
+              priority
             />
           </div>
           <p className={styles.brandLabel}>Finance</p>
