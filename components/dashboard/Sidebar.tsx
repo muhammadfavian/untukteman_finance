@@ -107,14 +107,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
         {/* Logo */}
         <div className={styles.logoSection}>
-          <Image
+          <img
             src="/images/logo_clean.png"
             alt="Untuk Teman Logo"
             width={56}
             height={56}
             className={styles.logo}
-            priority
-            unoptimized
           />
           <p className={styles.brandName}>UNTUK TEMAN</p>
           <p className={styles.brandSub}>Data untuk dampak<br />lebih besar</p>

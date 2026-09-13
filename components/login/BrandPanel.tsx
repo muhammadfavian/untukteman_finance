@@ -34,14 +34,12 @@ export default function BrandPanel() {
         {/* ── Logo + Brand — tepat di bawah teks ── */}
         <div className={styles.logoBrandWrap}>
           <div className={styles.logoWrap}>
-            <Image
+            <img
               src="/images/logo_clean.png"
               alt="Untuk Teman Logo"
               width={80}
               height={80}
               className={styles.logo}
-              priority
-              unoptimized
             />
           </div>
           <p className={styles.brandLabel}>Finance</p>
