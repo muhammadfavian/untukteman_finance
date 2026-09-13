@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
 import styles from './LoginForm.module.css';
 
@@ -55,7 +54,6 @@ function SpinnerIcon() {
 }
 
 export default function LoginForm() {
-  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [email, setEmail] = useState('');
@@ -90,11 +88,9 @@ export default function LoginForm() {
         return;
       }
 
-      router.push('/dashboard');
-      router.refresh();
+      window.location.href = '/dashboard';
     } catch {
       setError('Terjadi kesalahan. Silakan coba lagi.');
-    } finally {
       setLoading(false);
     }
   };

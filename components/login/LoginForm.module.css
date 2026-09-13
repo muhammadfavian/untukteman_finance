@@ -189,6 +189,9 @@
   padding: 4px;
   border-radius: 4px;
   transition: color 0.2s;
+  cursor: pointer;
+  z-index: 5;
+  pointer-events: auto;
 }
 
 .eyeButton svg {
